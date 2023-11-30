@@ -16,12 +16,15 @@ class DataGridExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
+        $configuration = $this->getConfiguration($configs, $container);
+        $config = $this->processConfiguration($configuration, $configs);
+
         $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.php');
 
         $compilerDefinition = $container->getDefinition('data_grid.compiler');
 
-        foreach ($configs['compiler']['writers'] as $writer) {
+        foreach ($config['compiler']['writers'] as $writer) {
 
             if (!$container->hasDefinition($writer)) {
                 throw new \InvalidArgumentException(sprintf('Service "%s" not found', $writer));
