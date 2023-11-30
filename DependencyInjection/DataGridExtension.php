@@ -2,6 +2,8 @@
 
 namespace Alms\Bundle\DataGridBundle\DependencyInjection;
 
+use Alms\Bundle\DataGridBundle\Writer\BetweenWriter;
+use Alms\Bundle\DataGridBundle\Writer\QueryWriter;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -25,8 +27,8 @@ class DataGridExtension extends Extension
         $compilerDefinition = $container->getDefinition('data_grid.compiler');
 
         $config['compiler']['writers'] ??= [
-            'data_grid.writer.between',
-            'data_grid.writer.query',
+            BetweenWriter::class,
+            QueryWriter::class,
         ];
 
         foreach ($config['compiler']['writers'] as $writer) {

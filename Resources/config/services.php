@@ -15,11 +15,8 @@ return static function (ContainerConfigurator $container): void {
 
     $services->set('data_grid.compiler', Compiler::class);
 
-    $services->set('data_grid.writer.between', BetweenWriter::class);
-    $services->set('data_grid.writer.query', QueryWriter::class);
-
-    $services->alias(QueryWriter::class, 'data_grid.writer.query');
-    $services->alias(BetweenWriter::class, 'data_grid.writer.between');
+    $services->set(BetweenWriter::class);
+    $services->set(BetweenWriter::class);
 
     $services->set('data_grid.value_resolver', GridFactoryValueResolver::class)
         ->args([
