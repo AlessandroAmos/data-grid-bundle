@@ -1,0 +1,23 @@
+{
+  "name": "alms/data-grid-bundle",
+  "description": "A Symfony bundle to integrate the Spiral DataGrid component.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alessandro Amos",
+      "email": "alessandroamos@outlook.com.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Alms\\Bundle\\DataGridBundle\\": "./"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "symfony/framework-bundle": "^5.3",
+    "cycle/orm": "^v2.5",
+    "spiral/data-grid": "^3.0"
+  }
+}
