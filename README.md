@@ -1,8 +1,7 @@
 # DataGrid Bundle 
 
-[![Latest Stable Version](https://poser.pugx.org/alms/datagrid-bundle/v/stable)](https://packagist.org/packages/alms/datagrid-bundle)
-[![Total Downloads](https://poser.pugx.org/alms/datagrid-bundle/downloads)](https://packagist.org/packages/alms/datagrid-bundle)
-[![License](https://poser.pugx.org/alms/datagrid-bundle/license)](https://packagist.org/packages/alms/datagrid-bundle)
+[![Latest Stable Version](https://img.shields.io/packagist/v/alms/data-grid-bundle.svg?style=flat-square&label=stable)](https://packagist.org/packages/alms/data-grid-bundle)
+[![LICENSE](https://img.shields.io/github/license/AlessandroAmos/data-grid-bundle?style=flat-square)](https://opensource.org/license/mit/)
 
 This bundle provides a simple way to create a data grid for your entities, using [Spiral DataGrid](https://github.com/spiral/data-grid) library.
 
