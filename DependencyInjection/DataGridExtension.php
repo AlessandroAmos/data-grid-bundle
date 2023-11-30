@@ -24,6 +24,11 @@ class DataGridExtension extends Extension
 
         $compilerDefinition = $container->getDefinition('data_grid.compiler');
 
+        $config['compiler']['writers'] ??= [
+            'data_grid.writer.between',
+            'data_grid.writer.query',
+        ];
+
         foreach ($config['compiler']['writers'] as $writer) {
 
             if (!$container->hasDefinition($writer)) {
