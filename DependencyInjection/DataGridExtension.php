@@ -32,11 +32,6 @@ class DataGridExtension extends Extension
         ];
 
         foreach ($config['compiler']['writers'] as $writer) {
-
-            if (!$container->hasDefinition($writer)) {
-                throw new \InvalidArgumentException(sprintf('Service "%s" not found', $writer));
-            }
-
             $compilerDefinition->addMethodCall('addWriter', [new Reference($writer)]);
         }
     }
