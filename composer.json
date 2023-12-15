@@ -17,7 +17,7 @@
   "require": {
     "php": ">=8.1",
     "cycle/orm": "^v2.5",
-    "symfony/framework-bundle": "^5.4 || ^6.0",
+    "symfony/framework-bundle": "^5.4 || ^6.0 || ^7.0",
     "spiral/data-grid": "^3.0"
   }
 }
